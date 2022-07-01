@@ -21,7 +21,7 @@ OBS: Pseudointruçoes nao entram nesses padroes.
 * op: codigo da operaçcao (tabela);
 * RS e RT: registradores de origem;
 * RD: registrador de destino;
-* SHAMt: tamanho do deslocamento (shift  amonut);
+* SHAMT: tamanho do deslocamento (shift  amonut);
 * FUNCT: funçao (complementa op);
 
 É o formato padrao das insttruçoes aritmetica e lógica.
