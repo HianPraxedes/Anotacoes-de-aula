@@ -21,7 +21,7 @@ OBS: Pseudointruçoes nao entram nesses padroes.
 * op: codigo da operaçcao (tabela);
 * RS e RT: registradores de origem;
 * RD: registrador de destino;
-* SHAMB: tamanho do deslocamento (shift  amonut);
+* SHAMt: tamanho do deslocamento (shift  amonut);
 * FUNCT: funçao (complementa op);
 
 É o formato padrao das insttruçoes aritmetica e lógica.
@@ -30,7 +30,7 @@ EX: add $t0, $s1, $s2
 
         ↓
 
- vazio      | $s1         |    $s2       |$t0           |vazio          |vazio
+ ------      | $s1         |    $s2       |$t0           |------          |------
 ---------|-------------|-------------|----------------- |----------------|---------
 0   |17    | 18|8| 0| 32
 
@@ -38,7 +38,7 @@ EX: add $t0, $s1, $s2
 
 00000   |10001    | 10010|01000| 00000| 10000
 ---------|-------------|-------------|----------------- |----------------|---------
-6|5|5|5|5|6
+6 bits|5 bits|5 bits|5 bits|5 bits|6 bits
 
 OBS: Por que os campos RS, RT, RD e SHAM possuem 5 bits?
 
@@ -56,18 +56,20 @@ OBS: Por que os campos RS, RT, RD e SHAM possuem 5 bits?
 * rt: origem/destino
 * Intruções imediatas e de acesso á memória
 
-EX: addi $t0,$t0,$s0,3
+EX: addi $t0, $t0, $s0,3
 
                  ↓
 
- vazio      | $s0        |    $to       |vazio          
+ --------      | $s0        |    $to       |--------          
 ---------|-------------|-------------|----------------- 
 1   |16    | 8|3 
 6 bits|5 bits|5 bits|16 bits
 
                        ↓
 
-000001   |10000    | 01000|0000000000000001
+
+000001 |10000    | 01000|0000000000000001
+---------|-------------|-------------|----------------- 
 
 Obs: Ultimo campo possui capacidade de -2^15 a 2^-1.
 
@@ -75,7 +77,7 @@ Obs: Ultimo campo possui capacidade de -2^15 a 2^-1.
 
 * CONSTANTE: O assembler divide a intruçcao em mais de uma.
 * e quando foi acesso a memoria?
-* w $s0,0($s3)
+* w $s0,0( $s3)
 
 Em 8GB da RAM, quantas posiçoes possui a memoria
 
@@ -112,9 +114,9 @@ OBS: Sll r Srl são as unicas instruções do tiponn R que operam sobre dois reg
 * or/ori
 * nor (ou, não)
 
-Ex: nor $t0,$s0,$s1
+Ex: nor $t0, $s0, $s1
 
-$t0 = Não ($s0 ou$s1)
+$t0 = Não ( $s0 ou $s1)
 
 ### Para negar um reg.
 
