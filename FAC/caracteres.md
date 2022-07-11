@@ -51,7 +51,7 @@
      
 ## Constantes de 32 bits
 
-### Forato do tipo I
+### Formato do tipo I
 
 op    | rs    |rt    |const
 ------|-------|------|-----
