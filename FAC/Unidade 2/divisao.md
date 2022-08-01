@@ -67,3 +67,23 @@ It.|Descrição|Quoc.| Divisor|Resto
 --| Q[0] = 1, srl D|0001|0000 0010|0000 0011
 5|sll Q, R = R - D| 0010|0000 0010|0000 0001
 --|Q[0] = 1, srl D|0011|0000 0001| 0000 0001
+
+# Instruções no MIPS
+
+- div: Com sinal
+- divu: Sem sinal
+
+div reg1,reg2
+
+                resto|  quociente
+                hi   |  lo
+
+- mfhi reg → reg = hi
+- mflo reg → reg = lo
+
+### Obs.: O resto sempre possui o mesmo sinal do dividendo.
+
+        Ex.:
+                7/-3 = -2, resto = 1
+
+                -7/3 = -2, resto = -1
