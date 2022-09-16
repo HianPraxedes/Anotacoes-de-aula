@@ -63,3 +63,4 @@ Quanto bits são necessários para uma memória cache diretamente mapeada com 16
            ---------     =>   -------- KiB => 17,18KiB
            (2^3)*(2^10)         2^4
 
+
