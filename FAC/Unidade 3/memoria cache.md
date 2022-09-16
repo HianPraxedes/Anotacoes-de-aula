@@ -17,7 +17,7 @@ t bits ^^^^^^
 
 # Tamanho real da cache
 
-!(quadro)[https://github.com/HianPraxedes/Anotacoes-de-aula/blob/main/FAC/Unidade%203/fotos/quadro.jpeg]
+!(quadro)[FAC/Unidade 3/fotos/quadro.jpeg]
 
 Quando dizemos o tamanho de uma memória cache, nos referimos ao total de dados que ela pode armazenar.
 
