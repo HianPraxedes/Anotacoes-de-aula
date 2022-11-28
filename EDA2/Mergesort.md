@@ -16,12 +16,24 @@ Dado um vetor, divide-o no meio e ordena recursivamente cada metade. Na volta, i
             intercala(v, e, meio, d);
 
         }
+        intercala(int *v, int e, int meio, int d){
+            int *v2 = malloc((d-e+1)*sizeoff(int));
+            int i = e; j = meio + 1; k = 0;
+            while(i <= meio && j <= d){
+                if(v[i] <= v[j]) v2[k++] = v[j++];
+                else v2[k++] = v[j++];
+            }
+            while(i <= meio) v2[k++] = v[i++];
+            while(j <= d) v2[k++] = v[j++];
+            for(k=0,i=e;i<=d;k++,i++) v[i]=v2[k];
+        }
 
 
 <div align="center">
 	<img src="./fotos/quadro2.jpeg" alt="quadro">
 </div>
 
-        Spg = A1(q^n -1)     1(2^(k+1) -1)
-            ------------- = --------------- = 2^(k+1) -1
-                q-1             2-1
+1) Acada nível da árvore, fazemos operações com comp. O(n).
+2) Logo, o total de operações é a quantidade de níveis da árvore multiplicado por O(n).
+3) Quantos níveis possui uma árvore gerada para um vetor de n elementos, n=2
+4) Logo, como cada nível custa O(n), a comp. total é O(nlg(n))
