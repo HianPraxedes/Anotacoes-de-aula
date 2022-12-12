@@ -14,7 +14,6 @@ Dado um vetor, divide-o no meio e ordena recursivamente cada metade. Na volta, i
             mergeSort(v, e, meio+1, d);
 
             intercala(v, e, meio, d);
-
         }
         intercala(int *v, int e, int meio, int d){
             int *v2 = malloc((d-e+1)*sizeoff(int));
