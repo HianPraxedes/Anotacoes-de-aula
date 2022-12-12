@@ -33,7 +33,7 @@ Dado um vetor, divide-o no meio e ordena recursivamente cada metade. Na volta, i
 	<img src="./fotos/quadro2.jpeg" alt="quadro">
 </div>
 
-1) Acada nível da árvore, fazemos operações com comp. O(n).
+1) Acada nível da árvore, fazemos operações com comp. O(n).0
 2) Logo, o total de operações é a quantidade de níveis da árvore multiplicado por O(n).
 3) Quantos níveis possui uma árvore gerada para um vetor de n elementos, n=2
 4) Logo, como cada nível custa O(n), a comp. total é O(nlg(n))
