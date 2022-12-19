@@ -2,6 +2,8 @@
 
 - Divisão e conquista
 
+Mergesort é estável.
+
 Dado um vetor, divide-o no meio e ordena recursivamente cada metade. Na volta, intercalada as duas metades e obtém o vetor ordenado. Comp.: O(nlgn) (linearítmico)
 
         void mergeSort (int *v, int e, int d){

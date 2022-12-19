@@ -67,3 +67,43 @@ Implementação inline do particiona
             v[i] = v[j];
             v[j] = tmp;   
         }
+
+Para resolver o pior caso
+
+- Número aleatório
+  - pseudo aleatoriedade
+  - problema para definir a semente
+  - não resolve o pior caso (por quê?)
+- Mediana de 3 elementos 
+  - garante que o pivô não é o menor e nem maior.
+
+Como implementar mediana de 3?
+
+1) Clássica: v[e], v[d] e v[(e+d)/2]
+2) Como calcular?
+
+        if(v[d] < v[(d+e)/2]){
+            troca(v,d,(d+e)/2);
+        }
+        if(v[(d+e)/2] < v[e]){
+            troca(v,e,(d+e)/2);
+        }
+        if(v[(d+e)/2] < v[d]){
+            troca(v,d,(d+e)/2);
+        }
+
+Calculando as 3 instruções acima numa rotina
+
+        mediana3(v,e,d);
+
+        void quicksort(int *v, int e, int d){
+            if(d <= e){
+                return;
+            }
+            mediana3(v,e,d);
+            j=particiona(v,e,d);
+            quicksort(v,e,j-1);
+            quicksort(v,j+1,d);
+        }
+
+Quicksort é instável.
