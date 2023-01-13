@@ -87,3 +87,12 @@ Em árvore vetor é mais facil de ordenar do que lista encadeada.
 <div align="center">
 	<img src=".././fotos/quadro9.jpeg" alt="quadro">
 </div>
+
+2) Vetor
+
+Se raiz está na posição i, o filho esquerdo esta em 2*i+1 e o filho da direita, 2*i+2
+
+
+<div align="center">
+	<img src=".././fotos/quadro9.jpeg" alt="quadro">
+</div>
