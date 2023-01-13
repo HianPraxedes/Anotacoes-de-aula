@@ -31,7 +31,7 @@ Dado um vetor, divide-o no meio e ordena recursivamente cada metade. Na volta, i
 
 
 <div align="center">
-	<img src="./fotos/quadro2.jpeg" alt="quadro">
+	<img src=".././fotos/quadro2.jpeg" alt="quadro">
 </div>
 
 1) Acada nível da árvore, fazemos operações com comp. O(n).0

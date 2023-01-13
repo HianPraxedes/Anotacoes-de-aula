@@ -48,7 +48,7 @@ Simplesmente|anterior e próximo
 ### Ex:
 
 <div align="center">
-	<img src="./fotos/quadro.jpeg" alt="quadro">
+	<img src=".././fotos/quadro.jpeg" alt="quadro">
 </div>
 
 ## Inserção

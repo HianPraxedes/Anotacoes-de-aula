@@ -43,7 +43,7 @@ Solução 3: **O(m+n)**
 **Custo total = O(1)+O(n)+O(n+m)**
 
 <div align="center">
-	<img src="./fotos/quadro4.jpeg" alt="quadro">
+	<img src=".././fotos/quadro4.jpeg" alt="quadro">
 </div>
 
 		int hash(int x){
@@ -81,7 +81,7 @@ Solução 3: **O(m+n)**
 1) Endereçamento aberto
 
 <div align="center">
-	<img src="./fotos/quadro5.jpeg" alt="quadro">
+	<img src=".././fotos/quadro5.jpeg" alt="quadro">
 </div>
 
 -	A função hash estabelece o início para fazer a busca no vetor, para-se quando encontrar vazio.
@@ -107,7 +107,7 @@ Densidade é o complemento:
 					 	 #elementos
 
 <div align="center">
-	<img src="./fotos/quadro6.jpeg" alt="quadro">
-</div>
+	<img src=".././fotos/quadro6.jpeg" alt="quadro">
 
+EDA2\fotos\quadro6.jpeg
 Obs.: Como listas não ocupam posições continuas na memória a busca pode ser mais lenta por conta de muitas folas que podem ocorrer na memória.

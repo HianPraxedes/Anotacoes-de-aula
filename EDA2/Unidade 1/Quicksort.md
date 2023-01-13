@@ -47,7 +47,7 @@ j = pivô
 Implementação inline do particiona
 
 <div align="center">
-	<img src="./fotos/quadro3.jpeg" alt="quadro">
+	<img src=".././fotos/quadro3.jpeg" alt="quadro">
 </div>
 
         int particiona(int *v, int e, int d){
