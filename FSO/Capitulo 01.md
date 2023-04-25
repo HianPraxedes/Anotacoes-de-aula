@@ -38,7 +38,9 @@ Obs.: Bootstrap = carregador de inicialização
    -  Uma ou mais CPUs, controladores de dispositivos conectam-se por meio de um barramento comum, fornecendo acesso à memória compartilhada
    -  Execução simultânea de CPUs e dispositivos competindo por ciclos de memória
 
-![foto](.\fotos\foto1.png)
+<div align="center">
+	<img src="././fotos/foto1.png" alt="foto01">
+</div>
 
 ## Operação do Sistema de Computador
 
@@ -136,7 +138,9 @@ Registradores > Memória cache > Memória pricipal (RAM) > SSD > HD > Disco opti
     -   Chassis contendo vários sistemas separados
   
 
-![foto](.\fotos\foto2.png)
+<div align="center">
+	<img src="././fotos/foto2.png" alt="foto02">
+</div>
 
 ## Sistemas agrupados
 
