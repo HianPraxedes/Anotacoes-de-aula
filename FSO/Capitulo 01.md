@@ -110,7 +110,7 @@ Obs.:  Buffer é uma área temporária de armazenamento de dados em memória.
 
 ## Hierarquia de armazenamento
 
-Registradores > Memória cache > Memória pricipal > SSD > HD > Disco optico > Fita magnética
+Registradores > Memória cache > Memória pricipal (RAM) > SSD > HD > Disco optico > Fita magnética
 
 ## Arquitetura do Sistema de Computador
 
@@ -214,3 +214,94 @@ relacionadas ao gerenciamento de processos:
 -  Fornecer mecanismos para tratamento de deadlock<br>
   Obs.: Deadlock (ou impasse) é uma situação em que dois ou mais processos ficam bloqueados, aguardando um ao outro para liberar recursos que cada um deles precisa para continuar a execução. Isso resulta em uma paralisação mútua, em que nenhum processo pode progredir e a CPU fica ociosa. Para resolver um deadlock, é necessário interromper um ou mais processos envolvidos, liberando os recursos que estão segurando e permitindo que outros processos possam continuar.
   
+  ## Gerenciamento de memória
+
+- O gerenciamento de memória é responsável por determinar quais instruções e dados de um programa estão carregados na memória, acompanhando o uso da memória e alocando ou desalocando espaço conforme necessário. 
+- Isso otimiza o uso da CPU e a resposta do computador aos usuários.
+- As atividades incluem monitorar a memória em uso, decidir quais processos e dados são carregados e descarregados, e alocar e desalocar espaço de memória quando necessário.
+
+## Gerenciamento de memória
+
+- O gerenciamento de memória é responsável por garantir que todas as instruções e dados necessários para a execução de um programa estejam em memória, decidindo quando e como alocar ou desalocar espaço de memória para otimizar a utilização da CPU e a resposta do computador aos usuários.
+- As atividades incluem monitorar o uso da memória, decidir quais processos e dados são carregados e descarregados, e alocar e desalocar espaço de memória conforme necessário.
+
+## Gerenciamento de armazenamento
+
+- O sistema operacional fornece uma visão lógica do armazenamento de informações, abstraindo as propriedades físicas para unidades de armazenamento lógico, chamadas de arquivos. 
+- Cada meio de armazenamento é controlado por um dispositivo, como uma unidade de disco ou fita, e possui propriedades variáveis, como velocidade de acesso, capacidade e método de acesso. 
+- O sistema de arquivos organiza os arquivos em diretórios e controla o acesso por usuários. 
+- O sistema operacional realiza atividades como criação e exclusão de arquivos e diretórios, além de primitivos para manipulação desses objetos. 
+- Os arquivos são mapeados para o armazenamento secundário e backups são realizados em mídia de armazenamento estável e não volátil.
+
+## Gerenciamento de armazenamento em massa
+
+- Os discos são geralmente usados para armazenar dados que não cabem na memória principal ou que devem ser mantidos por um longo período de tempo, e o gerenciamento adequado é de importância central. 
+- A velocidade de operação do computador depende do subsistema de disco e seus algoritmos. 
+- As atividades do sistema operacional incluem o gerenciamento de espaço livre, alocação de armazenamento e agendamento de disco. 
+- Alguns armazenamentos não precisam ser rápidos, como é o caso do armazenamento terciário, que inclui armazenamento ótico e fita magnética. 
+- Ainda assim, esses meios de armazenamento devem ser gerenciados pelo sistema operacional ou aplicativos, e podem variar entre WORM (escrever uma vez, ler várias vezes) e leitura e escrita.
+
+## Migração dos dados “A” do Disco para o Registrador
+
+- Ambientes multitarefa devem ter o cuidado de usar o valor mais recente, não 
+importa onde ele esteja armazenado na hierarquia de armazenamento
+- Em um ambiente multiprocessador, várias CPUs podem ter cópias do mesmo dado em seus caches locais.
+- A atualização de um dado em um cache local não é imediatamente refletida nos caches das outras CPUs, o que pode levar a inconsistências nos dados.
+Para garantir que todas as CPUs tenham a mesma versão dos dados, é necessário fornecer coerência de cache em hardware.
+- A coerência de cache é uma técnica de sincronização de dados entre as caches de diferentes CPUs em um sistema multiprocessador.
+- Os protocolos de coerência de cache definem como as atualizações de dados são propagadas entre as diferentes caches.
+- Os protocolos são baseados em regras e sinais de controle de acesso à memória compartilhada para garantir que as atualizações sejam realizadas de maneira ordenada e que as caches sejam atualizadas corretamente.
+- A coerência de cache em hardware é essencial em sistemas multiprocessador para garantir a integridade dos dados e a consistência do sistema como um todo.
+
+## Subsistema de I/O
+
+- Um dos propósitos do SO é esconder do usuário as peculiaridades dos dispositivos de hardware
+
+### Subsistema de I/O é responsável por:
+- Gerenciamento de memória de I/O incluindo 
+  - buffering (armazenando dadostemporariamente enquanto está sendo transferido)
+  - Cache (armazenar partes de 
+dados em um armazenamento mais rápido para desempenho)
+  - Spool (a 
+sobreposição da saída de um trabalho com a entrada de outros trabalhos)
+- Interface geral do driver de dispositivo
+-  Drivers para dispositivos de hardware específicos
+
+## Proteção e Segurança
+
+### Proteção
+- Qualquer mecanismo para controlar o acesso de processos ou usuários a recursos definidos pelo sistema operacional
+
+### Segurança
+
+- Defesa do sistema contra ataques internos e externos
+  - Enorme variedade, incluindo negação de serviço, worms, vírus, roubo de identidade, roubo de serviço
+
+ O sistema geralmente primeiro destingue entre os usuários, para determinar quem pode fazer o que 
+- Identidades de usuário (IDs de usuário, IDs de segurança) incluem nome e número associado, um por usuário
+- ID do usuário então associado a todos os arquivos, processos desse usuário para determinar o controle de acesso
+- O identificador de grupo (ID de grupo) permite que um conjunto de usuários seja definido e os 
+controles gerenciados, e também associados a cada processo, arquivo
+- A escalação de 
+privilégio permite que o usuário mude para um ID efetivo com mais direitos
+
+## Estruturas de Dados do Kernel
+
+- Lista encadeada
+- Lista duplamente encadeada
+- Lista encadeada circular
+- Árvore de pesquisa binária 
+  - esquerda <= direita 
+  - O desempenho da pesquisa é O(n)
+  - A árvore de busca binária balanceada é O(lg n)
+- A função hash que pode criar um mapa hash
+-  Bitmap – string de n dígitos binários representando o status de n itens
+-  Estruturas de dados do Linux definidas em include files <linux/list.h>, <linux/kfifo.h>, 
+<linux/rbtree.h>
+
+
+
+
+
+
+
