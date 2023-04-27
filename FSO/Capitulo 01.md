@@ -302,10 +302,3 @@ privilégio permite que o usuário mude para um ID efetivo com mais direitos
 -  Bitmap – string de n dígitos binários representando o status de n itens
 -  Estruturas de dados do Linux definidas em include files <linux/list.h>, <linux/kfifo.h>, 
 <linux/rbtree.h>
-
-
-
-
-
-
-
